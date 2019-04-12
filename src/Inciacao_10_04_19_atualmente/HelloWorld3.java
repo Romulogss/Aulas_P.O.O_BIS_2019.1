@@ -1,5 +1,6 @@
 package Inciacao_10_04_19_atualmente;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -8,7 +9,8 @@ import java.util.Date;
 public class HelloWorld3 {
 
     public static void main(String[] args) { //assinatura própria
-        System.out.println("Olá mundo, " + new Date());
-        
+        SimpleDateFormat formato = new SimpleDateFormat();
+        System.out.println("Olá mundo, " + formato.format(new Date()));
+
     }
 }
