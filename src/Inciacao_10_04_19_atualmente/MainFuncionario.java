@@ -12,6 +12,10 @@ public class MainFuncionario {
         System.out.println(f1.getSalario());
         Funcionario f2 = new Funcionario();
         System.out.println(f2.getMatricula());
+        f1.setImposto(10);
+        System.out.println(f1.getSalario());
+        System.out.println(f2.getMatricula());
+        
     }
 
 }

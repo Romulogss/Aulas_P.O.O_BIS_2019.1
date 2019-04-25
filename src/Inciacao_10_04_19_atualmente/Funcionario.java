@@ -5,8 +5,7 @@ public class Funcionario {
     private int matricula;
     private String nome;
     private double salarioBase;
-    private static double imposto = 27.0;
-    
+    private static double imposto = 25.0;
 
     public int getMatricula() {
         return matricula;
@@ -31,9 +30,17 @@ public class Funcionario {
     public void setSalarioBase(int salarioBase) {
         this.salarioBase = salarioBase;
     }
-    
-    public double getSalario(){
-        return salarioBase - salarioBase*(imposto/100);
+
+    public double getSalario() {
+        return salarioBase - salarioBase * (imposto / 100);
+    }
+
+    public static double getImposto() {
+        return imposto;
+    }
+
+    public static void setImposto(double imposto) {
+        Funcionario.imposto = imposto;
     }
 
 }
