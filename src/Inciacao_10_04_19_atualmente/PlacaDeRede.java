@@ -5,17 +5,30 @@ package Inciacao_10_04_19_atualmente;
  * @author Rômulo
  */
 public class PlacaDeRede {
-    private int mac;
+
+    private final int mac;
     private String ip;
     private static int macSequence;
-    public PlacaDeRede(){
+
+    public PlacaDeRede() {
         mac = ++macSequence;
     }
-    
-    public void setIp(String ip){
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
         this.ip = ip;
     }
-    public int getMac(){
+
+    public int getMac() {
         return mac;
     }
+
+    public static int getMacSequence() {
+        return macSequence;
+    }
+    
+    
 }

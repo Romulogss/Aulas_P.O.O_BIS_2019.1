@@ -5,7 +5,7 @@ public class Funcionario {
     private int matricula;
     private String nome;
     private double salarioBase;
-    private static double imposto = 25.0;
+    public static double imposto = 25.0;
 
     public int getMatricula() {
         return matricula;

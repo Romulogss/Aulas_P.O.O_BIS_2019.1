@@ -10,5 +10,6 @@ public class MainPlacaDeRede {
         System.out.println(placaDeRede.getMac());
         PlacaDeRede placaDeRede2 = new PlacaDeRede();
         System.out.println(placaDeRede2.getMac());
+        System.out.println(PlacaDeRede.getMacSequence());
     }
 }
