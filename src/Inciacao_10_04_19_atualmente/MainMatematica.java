@@ -16,7 +16,7 @@ public class MainMatematica {
         System.out.print("Informe um valor: ");
         valor = scanner.nextDouble();
         
-        System.out.print("Informe um valor: ");
+        System.out.print("Informe outro valor: ");
         valor2 = scanner.nextDouble();
         
         System.out.println("Qual operação deseja fazer com " + valor + " e " + valor2);
@@ -27,10 +27,19 @@ public class MainMatematica {
         operacao = scanner.nextInt();
         switch (operacao) {
             case 1:
-                //Matematica.
+                Matematica.somar(valor, valor2);
+                break;
+            case 2:
+                Matematica.subtrair(valor, valor2);
+                break;
+            case 3:
+                Matematica.multiplicar(valor, valor2);
+                break;
+            case 4:
+                Matematica.multiplicar(valor, valor2);
                 break;
             default:
-                throw new AssertionError();
+                System.out.println("Opção inválida");
         }
     }
 }
