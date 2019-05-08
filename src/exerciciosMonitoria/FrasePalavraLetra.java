@@ -24,27 +24,27 @@ public class FrasePalavraLetra {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String frase;
-        int palavras = 0, letras = 0, vogais = 0, concoantes = 0;
+        int palavras = 0, letras = 0, vogais = 0, concoantes;
 
         System.out.print("Informe uma frase: ");
         frase = scanner.nextLine();
 
         for (int i = 0; frase.length() > i; i++) {
-            char letraAtual = frase.charAt(i);
+            char letraAtual = frase.toLowerCase().charAt(i);
             if (Character.isAlphabetic(letraAtual)) {
                 letras++;
+                if (isVoagal(letraAtual)) {
+                    ++vogais;
+                }
             } else if (letraAtual == ' ') {
                 palavras++;
-            }
-            if (isVoagal(letraAtual)) {
-                vogais++;
             }
         }
         concoantes = letras - vogais;
         System.out.println("A frase: \"" + frase + "\", tem:");
         System.out.println(letras + " letras.");
         System.out.println((palavras + 1) + " palavras.");
-        System.out.println(concoantes + "conçoantes.");
-        System.out.println(vogais + "vogais.");
+        System.out.println(concoantes + " conçoantes.");
+        System.out.println(vogais + " vogais.");
     }
 }
